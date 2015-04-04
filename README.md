@@ -10,7 +10,7 @@ Github site: <a href="https://github.com/chenx/MidiPlayer">https://github.com/ch
 About
 ---------
 
-MIDI is a widely used music format online. However the HTML5 Audio tag supports only wav/mp3/ogg formats so far. Playing MIDI usually uses the embed tag which requires the QuickTime plugin, or deprecated tag such as bgsound in IE, but not always work.
+MIDI is a widely used music format online. However the HTML5 Audio tag supports only wav/mp3/ogg formats so far. Playing MIDI usually uses the <i>embed</i> tag which requires the QuickTime plugin, or deprecated tag such as <i>bgsound</i> in IE, but not always work.
 
 The MidiPlayer javascript class is used to play MIDI, without any plugin. It requires a HTML5 browser: firefox, chrome, safari, opera. IE9+ may work but not tested. Firefox works the best, followed by Chrome, Safari and Opera.
 
