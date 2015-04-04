@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+    <script src="javascript/midi.min.js"></script>
+    <script type="text/javascript">
+    var mp1, mp2;
+
+    function init() {
+        // Example 1. This will loop 5 times, and has a callback function at the end.
+        var callback = function() { document.getElementById('btn1').value = 'play'; }
+        mp1 = new MidiPlayer('Saved.mid', 'btn1', true, 5, callback);
+        mp1.setDebugDiv('msg');
+
+        // Example 2. This will not loop.
+        mp2 = new MidiPlayer('Bach_Badinerie.mid', 'btn2'); 
+    }
+
+    function doPlay(m, btn) {
+        if (btn.value == 'play') {
+            m.play();
+            btn.value = 'stop';
+        }
+        else {
+            m.stop();
+            btn.value = 'play';
+        }
+    }
+    
+    function do_clear() { 
+	    document.getElementById('msg').innerHTML=''; 
+	    document.getElementById('div_clear').style.display='none';
+	}
+	function show_clear() {
+        document.getElementById('div_clear').style.display='block';
+	}
+    </script>
+
+</head>
+
+<body onload="javascript:init();">
+
+<h1>Demonstrate the MidiPlayer class</h1>
+<p>
+By: X. Chen
+<br/>Created on: 4/1/2015
+<br/>Last Modified: 4/3/2015
+<br/>Github site: <a href="https://github.com/chenx/MidiPlayer">https://github.com/chenx/MidiPlayer</a>
+</p>
+
+<p>The MidiPlayer javascript class is used to play midi, without any plugin.
+It requires a HTML5 browser: firefox, chrome, safari, opera. IE9+ may work but not tested.
+Firefox  works the best, followed by Chrome, Safari and Opera.</p>
+
+<h3>Demo</h3>
+<p>Button is used here. You can also use div, span etc.</p>
+
+Save.mid: <input type="button" value="play" id="btn1" onclick="doPlay(mp1, this); show_clear();"/> (repeat 5 times)
+<span onclick="mp1.stop();" style="background-color:#eeeeee;">Stop Save.mid</span>
+<br/>
+
+Bach.mid: <input type="button" value="play" id='btn2' onclick="doPlay(mp2, this);"/><br/><br/>
+
+<div id='msg'></div>
+<input type="button" id='div_clear' style="display:none;" value="Clear Message" onclick="javascript: do_clear();"/>
+        
+        
+<h3>Usage</h3>
+
+<p>You just need to include <a href="javascript/midi.min.js">midi.min.js</a> 
+(uncompressed version: <a href="javascript/midi.js">midi.js</a>) in the head section of your html page:<pre>
+    &lt;script src="javascript/midi.min.js"&gt;&lt;/script&gt;
+</pre>
+An alternative is to include all the files from which midi.js was made (Of course, the first way is much better):<pre>
+    &lt;script src="javascript/midi/stream.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/midifile.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/replayer.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/synth.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/audio.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/vbscript.js"&gt;&lt;/script&gt;
+    &lt;script src="javascript/midi/MidiPlayer.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>You also need to include <a href="da.swf">da.swf</a> in the same directory as your html file. 
+This is needed by Safari and Opera.
+
+<p>For the rest, check the html source of the demo above. It's just a few lines of javascript.
+    
+<h3>Features</h3>
+<ul>
+<li>Can specify these in constructor parameter list: midi, target, loop, maxLoop, end_callback. 
+<br/>- midi:    MIDI file path.
+<br/>- target:  Target html element that this MIDI player is attached to.
+<br/>- loop:    Optinoal. Whether loop the play. Value is true/false, default is false.
+<br/>- maxLoop: Optional. max number of loops to play when loop is true. Negative or 0 means infinite. Default is 1.
+<br/>- end_callback: Optional. Callback function when MIDI ends. 
+<br/>&nbsp; e.g., use this to reset target button value from "stop" back to "play".
+</li>
+<li>Can specify a debug div, to display debug message: setDebugDiv(debug_div_id).
+<li>Start/stop MIDI by: start(), stop().
+<li>If a MIDI started play, call start() again will stop and then restart from beginning.
+</li>
+</ul>
+
+<p>This depends on other 5 javascript files (audio.js, midifile.js, replayer.js, stream.js, synth.js) from [2][3], 
+which is a demo of [1]. This is related to [4], which is a powerful tool to play MIDI in browser. 
+
+<p>The disadvantage of [2][3] is that it does not have control over how a MIDI file is played: when clicking on the 
+link the file will be started multiple times and sounds chaotic; and there is no loop feature. Both are well handled
+by MidiPlayer.js here. 
+
+<p>Another midi player javascript is in [5], but it cannot play multiple MIDI files at the same time,
+cannot play a MIDI file automatically after loading the page, and has no loop feature. 
+All are handled by MidiPlayer.js here.
+
+<p>It can be a good idea to add MIDI support to HTML5 Audio tag, because MIDI files have
+much smaller size than wav/mp3, and the sound effects are very rich.</p>
+
+
+<h3>To-Do</h3>
+
+<p>IE support, like how [5] does.</p>
+
+<br/>[1] <a href="http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/">http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/</a>
+<br/>[2] <a href="http://jsspeccy.zxdemo.org/jasmid/">http://jsspeccy.zxdemo.org/jasmid/</a>
+<br/>[3] <a href="https://github.com/gasman/jasmid">https://github.com/gasman/jasmid</a>
+<br/>[4] <a href="http://mudcu.be/midi-js/">MIDI.js - Sequencing in Javascript.</a>
+<br/>[5] <a href="http://www.midijs.net/">MIDI.js - The 100% JavaScript MIDI Player using W3C Web Audio</a>
+<br/>[6] <a href="http://sergimansilla.com/blog/dinamically-generating-midi-in-javascript/">Dynamically generating MIDI in JavaScript</a>
+
+<p><br/></p>
+
+
+</body>
+</html>
+
