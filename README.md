@@ -60,6 +60,10 @@ To-Do
 
 IE support, like how [5] does.  
 
+
+References
+----------
+
 [1] http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/  
 [2] http://jsspeccy.zxdemo.org/jasmid/  
 [3] https://github.com/gasman/jasmid  
