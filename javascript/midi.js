@@ -391,7 +391,7 @@ function AudioPlayer(generator, targetElement, opts) {
                 write(generator.generate(bufferFillLength));
             };
             if (!requestStop && !generator.finished) setTimeout(checkBuffer, checkInterval);
-                        if (!requestStop && generator.finished) fireEventEnded(targetElement); // xc.
+            if (!requestStop && generator.finished) fireEventEnded(targetElement); // xc.
         }
         
         function checkReady() {
