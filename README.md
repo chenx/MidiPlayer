@@ -67,7 +67,7 @@ References
 [1] http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/  
 [2] http://jsspeccy.zxdemo.org/jasmid/  
 [3] https://github.com/gasman/jasmid  
-[4] MIDI.js - Sequencing in Javascript.  
-[5] MIDI.js - The 100% JavaScript MIDI Player using W3C Web Audio  
-[6] Dynamically generating MIDI in JavaScript  
+[4] <a href="http://mudcu.be/midi-js/">MIDI.js - Sequencing in Javascript.</a>  
+[5] <a href="http://www.midijs.net/">MIDI.js - The 100% JavaScript MIDI Player using W3C Web Audio</a>  
+[6] <a href="http://sergimansilla.com/blog/dinamically-generating-midi-in-javascript/">Dynamically generating MIDI in JavaScript</a>  
 
