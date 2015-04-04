@@ -1,7 +1,7 @@
 //
 // This software is released under the 3-clause BSD license.
 //
-// Copyright (c) 2015, Xin Chen 
+// Copyright (c) 2015, Xin Chen <txchen@gmail.com>
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
