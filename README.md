@@ -57,7 +57,7 @@ Features
 
 This depends on other 5 javascript files (audio.js, midifile.js, replayer.js, stream.js, synth.js) from [2][3], which is a demo of [1]. This is related to [4], which is a powerful tool to play MIDI in browser.
 
-The disadvantage of [2][3] is that it does not have control over how a MIDI file is played: when clicking on the link the file will be started multiple times and sounds chaotic; and there is no loop feature. Both are well handled by MidiPlayer.js here.
+The disadvantage of [2][3] is that it does not have control over how a MIDI file is played: when clicking on the link more than once the file will be started multiple times and sounds chaotic; and there is no loop feature. Both are well handled by MidiPlayer.js here.
 
 Another midi player javascript is in [5], but it cannot play multiple MIDI files at the same time, cannot play a MIDI file automatically after loading the page, and has no loop feature. All are handled by MidiPlayer.js here.
 
