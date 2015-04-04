@@ -5,7 +5,7 @@ A javascript class to play MIDI music directly, without plugin.
 By: X. Chen  
 Created on: 4/1/2015  
 Last Modified: 4/3/2015  
-Github site: https://github.com/chenx/Lib_HtmlJsCss/tree/master/midi
+Github site: <a href="https://github.com/chenx/MidiPlayer">https://github.com/chenx/MidiPlayer</a>
 
 Demo
 -----
@@ -15,7 +15,7 @@ Demo
 Usage
 -----
 
-You just need to include <a href="https://github.com/chenx/Lib_HtmlJsCss/tree/master/midi/javascript">midi.min.js</a> (uncompressed version: <a href="https://github.com/chenx/Lib_HtmlJsCss/blob/master/midi/javascript/midi.js">midi.js</a>) in the head section of your html page:
+You just need to include <a href="https://github.com/chenx/MidiPlayer/tree/master/javascript">midi.min.js</a> (uncompressed version: <a href="https://github.com/chenx/MidiPlayer/blob/master/javascript/midi.js">midi.js</a>) in the head section of your html page:
 
     <script src="javascript/midi.min.js"></script>
 
