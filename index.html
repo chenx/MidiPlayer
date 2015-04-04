@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
     <title>The MidiPlayer Javascript class to play MIDI</title>
+    <link rel="stylesheet" href="common.css"/>
     <script src="javascript/midi.min.js"></script>
     <script type="text/javascript">
     var mp1, mp2;
@@ -40,6 +41,8 @@
 </head>
 
 <body onload="javascript:init();">
+<div id="article">
+<div id="container">
 
 <h1>Demonstrate the MidiPlayer Javascript class</h1>
 <p>
@@ -48,6 +51,8 @@ By: X. Chen
 <br/>Last Modified: 4/3/2015
 <br/>Github site: <a href="https://github.com/chenx/MidiPlayer">https://github.com/chenx/MidiPlayer</a>
 </p>
+
+<div class="divider"><hr style="color:#ffeeee; "></div>
 
 <p>The MidiPlayer javascript class is used to play midi, without any plugin.
 It requires a HTML5 browser: firefox, chrome, safari, opera. IE9+ may work but not tested.
@@ -123,7 +128,10 @@ Besides there is a large repertoire of MIDI music online.</p>
 
 <p>IE support, like how [5] does.</p>
 
-<br/>[1] <a href="http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/">http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/</a>
+
+<h3>References</h3>
+
+[1] <a href="http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/">http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/</a>
 <br/>[2] <a href="http://jsspeccy.zxdemo.org/jasmid/">http://jsspeccy.zxdemo.org/jasmid/</a>
 <br/>[3] <a href="https://github.com/gasman/jasmid">https://github.com/gasman/jasmid</a>
 <br/>[4] <a href="http://mudcu.be/midi-js/">MIDI.js - Sequencing in Javascript.</a>
@@ -132,7 +140,8 @@ Besides there is a large repertoire of MIDI music online.</p>
 
 <p><br/></p>
 
-
+</div> <!--end of div container-->
+</div> <!--end of div article-->
 </body>
 </html>
 

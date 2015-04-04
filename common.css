@@ -1,0 +1,17 @@
+
+#container{background-color:#fff;border-style:hidden;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;margin:0 auto;width:770px;-webkit-box-shadow:0 1px 5px rgba(0,0,0,.2);-moz-box-shadow:0 1px 5px rgba(0,0,0,.2);box-shadow:0 1px 5px rgba(0,0,0,.2);padding:20px 20px 20px 30px}
+
+#article {padding-top:35px; padding-bottom:35px;}
+
+body{margin:0;font-family:gotham,helvetica,arial,sans-serif;font-style:normal;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}:lang(zh-cn) 
+
+body{font-family:gotham,Hiragino Sans GB,STHeiti,Microsoft Yahei,helvetica,arial,sans-serif}.ie8 body{font-family:gotham-400-normal,helvetica,arial,sans-serif;font-style:normal;font-weight:400}.ie8 :lang(zh-cn) 
+
+body{font-family:gotham-400-normal,Hiragino Sans GB,STHeiti,Microsoft Yahei,helvetica,arial,sans-serif}
+
+html,body{height:100%; background-color:#eeeeee;}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+
+.divider{margin-bottom:32px}
+
