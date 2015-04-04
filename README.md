@@ -32,7 +32,9 @@ An alternative is to include all the files from which midi.js was made (Of cours
 You also need to include da.swf in the same directory as your html file. This is needed by Safari and Opera.
 
 For the rest, check the html source of the demo above. It's just a few lines of javascript.
+
 Features
+---------
 
 * Can specify these in constructor parameter list: midi, target, loop, maxLoop, end_callback.
     - midi: MIDI file path.
