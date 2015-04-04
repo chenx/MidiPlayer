@@ -53,7 +53,7 @@ The disadvantage of [2][3] is that it does not have control over how a MIDI file
 
 Another midi player javascript is in [5], but it cannot play multiple MIDI files at the same time, cannot play a MIDI file automatically after loading the page, and has no loop feature. All are handled by MidiPlayer.js here.
 
-It can be a good idea to add MIDI support to HTML5 Audio tag, because MIDI files have much smaller size than wav/mp3, and the sound effects are very rich. Besides there is a large repertoise of MIDI music online.
+It can be a good idea to add MIDI support to HTML5 Audio tag, because MIDI files have much smaller size than wav/mp3, and the sound effects are very rich. Besides there is a large repertoire of MIDI music online.
 
 To-Do
 -----
