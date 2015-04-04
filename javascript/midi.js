@@ -35,9 +35,10 @@
  * MidiPlayer class. Used to play midi by javascript, without any plugin.
  * Requires a HTML5 browser: firefox, chrome, safari, opera, IE10+.
  *
- * The other 5 js files are from [2], which is a demo of [1]: 
+ * The other 5 js files are from [2][3], which is a demo of [1]: 
  * [1] http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/
  * [2] http://jsspeccy.zxdemo.org/jasmid/
+ * [3] https://github.com/gasman/jasmid 
  *
  * Modification is done to audio.js:
  * - added function fireEventEnded().
