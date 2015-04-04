@@ -1,7 +1,7 @@
 //
 // This software is released under the 3-clause BSD license.
 //
-// Copyright (c) 2015, Xin Chen
+// Copyright (c) 2015, Xin Chen 
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -46,7 +46,7 @@
  *   when you loop the play:
  *   Failed to construct 'AudioContext': number of hardware contexts reached maximum (6)
  *
- * See: https://github.com/chenx/Lib_HtmlJsCss/tree/master/midi
+ * Github site: https://github.com/chenx/MidiPlayer
  *
  * @by: X. Chen
  * @Create on: 4/1/2015
