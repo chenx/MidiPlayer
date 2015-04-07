@@ -38,6 +38,7 @@ function AudioPlayer(generator, targetElement, opts) {
         var bufferFillLength = Math.floor(latency * sampleRate);
         
         function checkBuffer() {
+            if (requestStop) return; // no more data feed after request stop. xc.
             if (buffer.length) {
                 var written = audioElement.mozWriteAudio(buffer);
                 buffer = buffer.slice(written);
@@ -126,11 +127,13 @@ function AudioPlayer(generator, targetElement, opts) {
         }
         
         function checkBuffer() {
+            if (requestStop) return; // no more data feed after request stop. xc.
             if (swf.bufferedDuration() < minBufferDuration) {
                 write(generator.generate(bufferFillLength));
             };
             if (!requestStop && !generator.finished) setTimeout(checkBuffer, checkInterval);
                         if (!requestStop && generator.finished) fireEventEnded(targetElement); // xc.
+            if (!requestStop && generator.finished) fireEventEnded(targetElement); // xc.
         }
         
         function checkReady() {
