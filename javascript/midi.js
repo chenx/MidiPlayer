@@ -130,17 +130,19 @@ if (typeof (MidiPlayer) == 'undefined') {
             // and more listeners attached, and will fire n events the n-th time calling play.
             if (! this.listener_added) {
                 this.listener_added = true;
-                o.addEventListener('ended', function() { // addEventListener not work for IE8.
-                    //alert('ended');
-                    if (_this.max_loop_ct <= 0 || (++ _this.ct) < _this.max_loop_ct) {
-                        _this.replayer = Replayer(_this.midiFile, _this.synth);
-                        _this.audio = AudioPlayer(_this.replayer, o, loop);
-                        _this.debug( file + ': loop ' + (1 +_this.ct) );
-                    }
-                    else if (_this.max_loop_ct > 0) {
-                        _this.stop();
-                    }
-                }, false);
+                if (o) { // If o does not exist, don't add listener.
+                    o.addEventListener('ended', function() { // addEventListener not work for IE8.
+                        //alert('ended');
+                        if (_this.max_loop_ct <= 0 || (++ _this.ct) < _this.max_loop_ct) {
+                            _this.replayer = Replayer(_this.midiFile, _this.synth);
+                            _this.audio = AudioPlayer(_this.replayer, o, loop);
+                            _this.debug( file + ': loop ' + (1 +_this.ct) );
+                        }
+                        else if (_this.max_loop_ct > 0) {
+                            _this.stop();
+                        }
+                    }, false);
+                }
              }
          } else if (window.attachEvent) { // IE don't work anyway.
              //document.getElementById('music').attachEvent(
